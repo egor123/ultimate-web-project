@@ -1,0 +1,17 @@
+u-header{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    background: green;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 4rem;
+}
+
+u-header > * {
+    margin-right: 2rem;
+}
+u-header h1 {
+    margin-right: auto;
+}

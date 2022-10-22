@@ -1,0 +1,12 @@
+{
+  "components": {
+    "u-app": "/src/app/app",
+    "u-header": "/src/components/header/header.component",
+    "u-footer": "/src/components/footer/footer.component",
+    "u-test": "/src/components/test/test.component"
+  },
+  "views": {
+    "Home": ["/#/", "/src/views/main/main.view"],
+    "Test": ["/#/test", "/src/views/test/test.view"]
+  }
+}

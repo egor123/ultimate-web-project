@@ -1,0 +1,9 @@
+u-app{
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+u-app u-router{
+    display: block;
+}
