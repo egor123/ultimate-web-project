@@ -11,8 +11,8 @@ export class Router {
             route(e) {
                 if(this.view != undefined)
                     this.unload(this.view);
-                this.view = this.routes[e.newURL.match(/\/#(.*)$/)[0]];
-                if(this.view === this.undefined){
+                this.view = this.routes[e.newURL.match(/\/#(.*)$/)?.[0]];
+                if(this.view === undefined){
                     window.history.pushState(null, null, "/#/");
                     this.view = this.routes["/#/"]
                 }
