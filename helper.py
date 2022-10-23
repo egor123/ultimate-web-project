@@ -68,7 +68,7 @@ def main():
 
     # TODO fancy json comarison
     with open("./src/settings.json", "w+") as f:
-        f.write(json.dumps(dict, indent=1))
+        f.write(json.dumps(dict, indent=4))
 
 
 if __name__ == "__main__":
