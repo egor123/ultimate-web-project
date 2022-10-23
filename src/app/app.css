@@ -1,9 +1,5 @@
 u-app{
-    background-color: red;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-u-app u-router{
-    display: block;
+    display: grid;
+    grid-template-rows: max-content auto max-content;
+    min-height: 100vh;
 }
