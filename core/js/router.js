@@ -9,21 +9,21 @@ export class Router {
                 this.route({ newURL: window.location.href })
             }
             route(e) {
-                if(this.view != undefined)
+                if (this.view !== undefined)
                     this.unload(this.view);
                 this.view = this.routes[e.newURL.match(/\/#(.*)$/)?.[0]];
-                if(this.view === undefined){
+                if (this.view === undefined) {
                     window.history.pushState(null, null, "/#/");
                     this.view = this.routes["/#/"]
                 }
                 this.load(this.view);
             }
-            load(route){
+            load(route) {
                 this.innerHTML = route.html;
                 route.module?.load?.(this);
                 ElementsUtils.setCss(route.path);
             }
-            unload(route){
+            unload(route) {
                 route.module?.unload?.(this);
                 ElementsUtils.removeCss(route.path);
             }
@@ -33,7 +33,6 @@ export class Router {
             customElements.define("u-router", Router);
         });
     }
-
     async getRoutes(routes) {
         return Object.assign({}, ... await Promise.all(Object.entries(routes).map(async ([name, [url, path]]) => {
             const html = await ElementsUtils.getHtml(path);

@@ -17,7 +17,6 @@ export class ElementsUtils {
         }
         customElements.define(name, Custom);
     }
-
     static async getHtml(path) {
         return await fetch(path + ".html")
             .then(t => t.text())
@@ -31,14 +30,14 @@ export class ElementsUtils {
         document.head.appendChild(link);
     }
     static removeCss(path) {
-        [...document.head.getElementsByTagName("link")].forEach(el =>{
-            if(el.href === path){
+        [...document.head.getElementsByTagName("link")].forEach(el => {
+            if (el.getAttribute("href") === path + ".css") {
                 document.head.removeChild(el);
                 return;
             }
         });
     }
     static async getJs(path) {
-        return await import(path + ".js");
+        return import(path + ".js");
     }
 }
