@@ -5,13 +5,13 @@ import json
 regex = re.compile('.*\.(html|css|js)$')
 dict = {"components": {}, "views": {}}
 
-jsDefComp = ["export default function(element){",
+jsDefComp = ["export default function (element) {",
              "   //TODO AUTO GENERATED CODE",
              "}"]
-jsDefView = ["export function load(element){",
+jsDefView = ["export function load (element) {",
              "   //TODO AUTO GENERATED CODE",
              "}",
-             "export function unload(element){",
+             "export function unload (element) {",
              "   //TODO AUTO GENERATED CODE",
              "}"]
 htmlDef = ["<templame>",
