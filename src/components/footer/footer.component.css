@@ -2,13 +2,14 @@ u-footer {
     display: block;
     width: 100%;
     height: 7rem;
+    z-index: 0;
 }
 
 u-footer .content {
     background: turquoise;
-    position: fixed;
+    pointer-events: auto;
+    position:fixed;
     bottom: 0;
-    height: inherit;
     width: inherit;
-    z-index: -1;
+    height: inherit;
 }

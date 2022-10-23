@@ -1,5 +1,10 @@
-u-app{
+u-app {
     display: grid;
     grid-template-rows: max-content auto max-content;
     min-height: 100vh;
+    pointer-events: none;
+}
+
+u-app>* {
+    z-index: 1;
 }
