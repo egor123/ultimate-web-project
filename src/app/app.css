@@ -2,9 +2,13 @@ u-app {
     display: grid;
     grid-template-rows: max-content auto max-content;
     min-height: 100vh;
-    pointer-events: none;
 }
-
-u-app>* {
+u-app u-header {
+    z-index: 2;
+}
+u-app u-router {
     z-index: 1;
+}
+u-app u-footer {
+    z-index: 0;
 }
