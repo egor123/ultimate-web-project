@@ -1,31 +1,17 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		}
-	],
-	"settings": {
-		"emeraldwalk.runonsave": {
-			"commands": [
-				// {
-				// 	"match": ".*",
-				// 	"isAsync": true,
-				// 	"cmd": "echo 'I run for all files.'"
-				// },
-				// {
-				// 	"match": "\\.txt$",
-				// 	"cmd": "echo 'I am a .txt file ${file}.'"
-				// },
-				{
-					// "match": "\\.js$",
-					"match": ".*",
-					"cmd": "python helper.py"
-				},
-				// {
-				// 	"match": ".*",
-				// 	"cmd": "echo 'I am ${env.USERNAME}.'"
-				// }
-			]
-		}
-	}
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {
+    "emeraldwalk.runonsave": {
+      "commands": [
+        {
+          "match": ".*",
+          "cmd": "python helper.py"
+        }
+      ]
+    }
+  }
 }
