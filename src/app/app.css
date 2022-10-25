@@ -1,3 +1,7 @@
+/* :root{
+    TODO PROPS
+} */
+
 u-app {
     display: grid;
     grid-template-rows: max-content auto max-content;

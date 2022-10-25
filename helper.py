@@ -66,6 +66,12 @@ def main():
                  lambda n: n.title(),
                  lambda p, n: [f"/#/{'' if n=='main' else n}", p+f"/{n}.view"])
 
+    for (path, _, names) in os.walk("./src/locales"):
+        dict["locales"] = {}
+        for name in names:
+            dict["locales"][name.split('.')[0]] = f"{path}/{name}"
+
+
     # TODO fancy json comarison
     with open("./src/settings.json", "w+") as f:
         f.write(json.dumps(dict, indent=4))

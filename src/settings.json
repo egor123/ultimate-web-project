@@ -14,5 +14,9 @@
             "/#/test",
             "/src/views/test/test.view"
         ]
+    },
+    "locales": {
+        "en": "./src/locales/en.locale.json",
+        "est": "./src/locales/est.locale.json"
     }
 }
