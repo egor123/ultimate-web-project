@@ -1,0 +1,13 @@
+u-footer {
+    display: block;
+    width: 100%;
+    height: 7rem;
+}
+
+u-footer .content {
+    background: turquoise;
+    position:fixed;
+    bottom: 0;
+    width: inherit;
+    height: inherit;
+}

@@ -1,3 +1,5 @@
-export default function () {
-  console.log('TEST IS LOADED!!!')
+/**
+* @param {HTMLElement} element 
+**/
+export default function (element) {
 }

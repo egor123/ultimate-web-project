@@ -1,0 +1,21 @@
+u-header {
+    background: green;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    top: 0;
+    transition: transform 0.1s linear;
+}
+
+u-header.hidden {
+    transform: translateY(-100%);
+}
+
+u-header>* {
+    margin: 1rem 2rem 1rem 0rem;
+}
+
+u-header h1 {
+    margin-right: auto;
+    margin-left: 1rem;
+}

@@ -1,0 +1,19 @@
+{
+    "id": "en",
+    "header":{
+        "name": "Header"
+    },
+    "footer":{
+        "name": "Footer"
+    },
+    "main": {
+        "id": "home",
+        "name": "Main page",
+        "hello_world": "Hello world!!!"
+    },
+    "test": {
+        "id": "test",
+        "name": "Test page",
+        "test": "Just a random test text :)"
+    }
+}

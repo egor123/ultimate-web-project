@@ -1,0 +1,22 @@
+{
+    "components": {
+        "u-app": "/src/app/app",
+        "u-footer": "/src/components/footer/footer.component",
+        "u-header": "/src/components/header/header.component",
+        "u-test": "/src/components/test/test.component"
+    },
+    "views": {
+        "Main": [
+            "/#/",
+            "/src/views/main/main.view"
+        ],
+        "Test": [
+            "/#/test",
+            "/src/views/test/test.view"
+        ]
+    },
+    "locales": {
+        "en": "./src/locales/en.locale.json",
+        "est": "./src/locales/est.locale.json"
+    }
+}
