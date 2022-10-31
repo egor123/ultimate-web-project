@@ -7,7 +7,6 @@ export class ElementsUtils {
         const html = await ElementsUtils.getHtml(path);
         const module = await ElementsUtils.getJs(path);
         ElementsUtils.setCss(path);
-
         class Custom extends HTMLElement {
             constructor() {
                 super();
