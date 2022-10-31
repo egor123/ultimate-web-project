@@ -1,10 +1,10 @@
 {
     "id": "en",
-    "header":{
-        "name": "Header"
-    },
-    "footer":{
+    "footer": {
         "name": "Footer"
+    },
+    "header": {
+        "name": "Header"
     },
     "main": {
         "id": "home",

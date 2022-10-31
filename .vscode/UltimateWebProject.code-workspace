@@ -10,6 +10,10 @@
         {
           "match": ".*",
           "cmd": "python helper.py"
+        },
+        {
+          "match": "\\.locale.json$",
+          "cmd": "python helper.locale.py ${file}"
         }
       ]
     }

@@ -1,10 +1,10 @@
 {
     "id": "est",
-    "header":{
-        "name": "Päis"
-    },
-    "footer":{
+    "footer": {
         "name": "Jalus"
+    },
+    "header": {
+        "name": "Päis"
     },
     "main": {
         "id": "kudu",
