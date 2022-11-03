@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        <!--INJECT_TITLE-->
+    </title>
+</head>
+
+<body>
+    <noscript><strong>Please enable JavaScript to continue.</strong></noscript>
+    <u-app id="app"></u-app>
+</body>
+<script>
+    const n = [];
+    const h = [];
+    const m = [];
+    const locale = new Locales();
+    const router = new Router();
+
+    const ce = (n, h, m) => {
+        customElements.define(n, class C extends HTMLElement {
+            constructor() {
+                super();
+                this.innerHTML = h;
+                m?.default?.(this);
+            }
+        });
+    };
+    for (let i = 0; i < h.length; i++)
+        ce(n[i], h[i], m[i]);
+</script>
+<style>
+    /* INJECT_STYLES */
+</style>
+
+</html>

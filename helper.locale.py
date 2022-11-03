@@ -29,6 +29,7 @@ def setVal(data, path, value):
         else:
             data[p] = value
 
+
 def f(i):
     match i[0]:
         case "id":
@@ -36,6 +37,7 @@ def f(i):
         case "name":
             return "2"
     return i[0]
+
 
 def sortDict(d):
     d = dict(sorted(d.items(), key=f))
@@ -57,8 +59,6 @@ def compareJson(path, required_keys):
         newData = sortDict(newData)
         f.truncate(f.seek(0))
         f.write(json.dumps(newData, indent=4, ensure_ascii=False, sort_keys=False))
-
-        # f.write(json.dumps(newData, indent=4, ensure_ascii=False, sort_keys=True))
 
 
 def main():
