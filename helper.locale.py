@@ -1,8 +1,6 @@
 import sys
 import os
 import json
-import collections
-
 
 def getFullKeys(data, path=""):
     keys = set()
@@ -57,9 +55,6 @@ def compareJson(path, required_keys):
         newData = sortDict(newData)
         f.truncate(f.seek(0))
         f.write(json.dumps(newData, indent=4, ensure_ascii=False, sort_keys=False))
-
-        # f.write(json.dumps(newData, indent=4, ensure_ascii=False, sort_keys=True))
-
 
 def main():
     file_path = sys.argv[1]
