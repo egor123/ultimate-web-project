@@ -1,6 +1,10 @@
-/* :root{
-    TODO PROPS
-} */
+:root{
+    --side-padding: 5rem;
+}
+
+body{
+    font-family: "Trebuchet MS";
+}
 
 u-app {
     display: grid;

@@ -3,6 +3,7 @@
         "u-app": "/src/app/app",
         "u-footer": "/src/components/footer/footer.component",
         "u-header": "/src/components/header/header.component",
+        "u-retro-wave": "/src/components/main/retro-wave/retro-wave.component",
         "u-test": "/src/components/test/test.component"
     },
     "views": {

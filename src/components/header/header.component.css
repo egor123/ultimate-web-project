@@ -1,21 +1,19 @@
 u-header {
-    background: green;
+    background: rgb(15, 1, 15);
+    color: white;
     position: sticky;
     display: flex;
     align-items: center;
     top: 0;
     transition: transform 0.1s linear;
+    gap: 2rem;
+    padding: 0 var(--side-padding);
 }
 
 u-header.hidden {
     transform: translateY(-100%);
 }
 
-u-header>* {
-    margin: 1rem 2rem 1rem 0rem;
-}
-
 u-header h1 {
     margin-right: auto;
-    margin-left: 1rem;
 }

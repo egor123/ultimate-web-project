@@ -1,152 +1,21 @@
 u-router {
     position: relative;
-    background: rgb(42, 180, 244);
+    background: black;
+    color: white;
 }
 
-u-router #background {
-    position: absolute;
-    width: 100%;
-    height: 67vh;
-    align-items: end;
-    background: rgb(54, 0, 54);
-}
-
-u-router #background>* {
-    position: absolute;
-}
-
-u-router #parallax {
-    bottom: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
-u-router #moon {
-    top: 50%;
-    transition: transform 0 ease-in-out 0.5s;
-}
-
-u-router #moon>* {
-    position: absolute;
-}
-
-u-router #name {
-    font-family: "Trebuchet MS";
-    text-align: center;
-    width: 400px;
-    font-size: 5rem;
-    margin: 0;
-    color: transparent;
-    background: linear-gradient(0, black 50%, rgba(46, 46, 46, 0.856) 50%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: chromatic 2s ease infinite;
-}
-
-@keyframes chromatic {
-    0% {
-        filter: drop-shadow(3px 2px 1px red) drop-shadow(0px -1px 1px blue) drop-shadow(-3px 0px 1px green);
-        background-size: 100% 4px;
-        transform: skewX(0deg);
-        opacity: 1;
-    }
-
-    25% {
-        filter: drop-shadow(5px 2px 1px blue) drop-shadow(0px -2px 1px green) drop-shadow(-3px 0px 1px green);
-        background-size: 100% 3px;
-        transform: skewX(0.5deg);
-        opacity: 0.9;
-    }
-
-    50% {
-        filter: drop-shadow(3px 2px 1px green) drop-shadow(0px -1px 1px red) drop-shadow(-4px 0px 1px green);
-        background-size: 100% 4px;
-        transform: skewX(0deg);
-        opacity: 1;
-    }
-
-    75% {
-        filter: drop-shadow(3px 2px 1px blue) drop-shadow(0px -1px 1px green) drop-shadow(-3px 0px 1px green);
-        background-size: 100% 3px;
-        transform: skewX(0.3deg);
-        opacity: 0.8;
-    }
-
-    100% {
-        filter: drop-shadow(3px 2px 1px red) drop-shadow(0px -1px 1px blue) drop-shadow(-3px 0px 1px green);
-        background-size: 100% 4px;
-        transform: skewX(0deg);
-        opacity: 1;
-    }
-}
-
-u-router #mountain {
-    pointer-events: none;
-}
-
-u-router .separator {
-    position: absolute;
-    width: 100%;
-    height: 10rem;
-    background: purple;
-    bottom: 0;
-    transform: translateY(50%);
-    backdrop-filter: blur(20px);
-    -webkit-mask-image: linear-gradient(0, transparent, black, transparent);
-    mask-image: linear-gradient(0, transparent, black, transparent);
-}
-u-router #main > .separator{
-    background: rgb(42, 180, 244);
-}
-
-u-router #main {
+u-router #content{
     position: relative;
-    background: linear-gradient(0, rgb(42, 180, 244), rgb(35, 41, 158), rgb(54, 0, 54) 50%);
-    height: 150vh;
-    width: 100%;
-    overflow: hidden;
-    perspective: 50em;
+    padding: var(--side-padding);
+    text-align: justify;
 }
 
-u-router #main::before {
-    --col: pink;
-    --size: 100px;
-
+u-router #content .separator{
     position: absolute;
-    content: '';
-    display: block;
-    height: 100%;
-    width: 200%;
-    left: -50%;
-    right: -50%;
-    bottom: -200px;
-    background-size: var(--size) var(--size);
-    background-position: 0 0, calc(var(--size) / 2) calc(var(--size) / 2);
-    background-image: linear-gradient(0, transparent 56%, var(--col) 56%, var(--col) 60%, transparent 60%),
-        linear-gradient(90deg, transparent 56%, var(--col) 56%, var(--col) 60%, transparent 60%);
-    animation: scroll 0.5s linear none infinite;
-
-}
-
-u-router #main::after {
-    pointer-events: none;
-    position: absolute;
-    content: '';
-    display: block;
-    background: radial-gradient(circle at 50% 40%, rgba(77, 7, 240, 0.2), transparent),
-        linear-gradient(0, rgb(42, 180, 244), transparent 30%);
-    width: 100%;
-    height: 100%;
-    filter: blur(20px);
-}
-
-@keyframes scroll {
-    0% {
-        transform: rotate3d(1, 0, 0, 60deg);
-    }
-
-    100% {
-        transform: rotate3d(1, 0, 0, 60deg) translateY(calc(-1 * var(--size)));
-    }
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+    height: 10rem;
+    background: linear-gradient(transparent, black, transparent);
 }
