@@ -32,6 +32,10 @@ body {
     border-radius: 10px;
 }
 
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(120deg, black, rgb(24, 0, 24));
+}
+
 /* ----------------------------- */
 
 @media(max-device-width: 1000px) {
