@@ -16,3 +16,11 @@ u-app u-router {
 u-app u-footer {
     z-index: 0;
 }
+
+/* public classes */
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
