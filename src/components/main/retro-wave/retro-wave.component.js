@@ -12,5 +12,5 @@ export default function (element) {
 }
 
 function parallax() {
-   moon.style.transform = `translateY(${-100 + window.scrollY / 2.5}px)`;
+   moon.style.transform = `translateY(${-100 + window.scrollY / 3}px)`;
 }

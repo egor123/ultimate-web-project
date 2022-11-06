@@ -71,12 +71,7 @@ u-retro-wave #parallax {
    overflow: hidden;
 }
 
-u-retro-wave #moon {
-   top: 50%;
-   transition: transform ease 0.1s;
-}
-
-u-retro-wave #moon>* {
+u-retro-wave #moon img {
    position: absolute;
 }
 
