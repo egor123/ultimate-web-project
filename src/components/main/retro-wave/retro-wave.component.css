@@ -61,9 +61,12 @@ u-retro-wave #background {
    background-size: contain; */
 }
 
+u-retro-wave img,
 u-retro-wave #background>* {
    position: absolute;
+   pointer-events: none;
 }
+
 
 u-retro-wave #parallax {
    height: 100%;
@@ -71,14 +74,10 @@ u-retro-wave #parallax {
    overflow: hidden;
 }
 
-u-retro-wave #moon img {
-   position: absolute;
-}
-
-u-retro-wave #name {
+u-retro-wave u-content {
    text-align: center;
    width: 400px;
-   font-size: 5rem;
+   font-size: 3rem;
    margin: 0;
    color: transparent;
    background: linear-gradient(0, black 50%, rgba(46, 46, 46, 0.856) 50%);
@@ -88,12 +87,7 @@ u-retro-wave #name {
    animation: chromatic 2s ease infinite;
 }
 
-u-retro-wave img {
-   pointer-events: none;
-}
-
-u-retro-wave .separator {
-   position: absolute;
+u-retro-wave #horizon {
    width: 100%;
    height: 10rem;
    background: var(--h-col);

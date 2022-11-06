@@ -7,14 +7,17 @@ export class ElementsUtils {
         const html = await ElementsUtils.getHtml(path);
         const module = await ElementsUtils.getJs(path);
         ElementsUtils.setCss(path);
-        class Custom extends HTMLElement {
+        customElements.define(name, class Custom extends HTMLElement {
             constructor() {
                 super();
-                this.innerHTML = html;
+                const inner = document.createElement("div");
+                inner.innerHTML = html;
+                const content = inner.querySelector("u-content");
+                if (content) content.innerHTML = this.innerHTML;
+                this.innerHTML = inner.innerHTML;
                 module?.default?.(this);
             }
-        }
-        customElements.define(name, Custom);
+        });
     }
     static async getHtml(path) {
         return await fetch(path + ".html")

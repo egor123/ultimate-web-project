@@ -1,29 +1,74 @@
-:root{
+:root {
+    /* colors */
+    --bg-1: rgb(0, 0, 0);
+    --bg-2: rgb(15, 1, 15);
+    --bg-3: rgb(10, 13, 66);
+
+    --txt-1: rgb(255, 255, 255);
+    --txt-2: rgb(129, 1, 129);
+    /*  ----------  */
     --side-padding: 5rem;
 }
 
-body{
+body {
+    background: var(--bg-1);
+    color: var(--txt-1);
     font-family: "Trebuchet MS";
 }
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--txt-2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: solid;
+    border-color: var(--bg-1);
+    background: linear-gradient(120deg, black, rgb(46, 0, 46));
+    border-radius: 10px;
+}
+
+/* ----------------------------- */
+
+@media(max-device-width: 1000px) {
+    body {
+        font-size: 1.5em;
+    }
+}
+
+@media(max-device-width: 500px) {
+    body {
+        font-size: 3em;
+    }
+}
+
+/* ----------------------------- */
 
 u-app {
     display: grid;
     grid-template-rows: max-content auto max-content;
     min-height: 100vh;
 }
+
 u-app u-header {
     z-index: 2;
 }
+
 u-app u-router {
     z-index: 1;
 }
+
 u-app u-footer {
     z-index: 0;
 }
 
-/* public classes */
+/* -------public-classes------- */
 
-.flex-center{
+.flex-center {
     display: flex;
     justify-content: center;
     align-items: center;

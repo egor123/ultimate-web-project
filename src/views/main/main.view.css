@@ -1,7 +1,6 @@
 u-router {
     position: relative;
-    background: black;
-    color: white;
+    background: var(--bg-1);
 }
 
 u-router #content{
@@ -17,5 +16,5 @@ u-router #content .separator{
     top: 0;
     transform: translateY(-50%);
     height: 10rem;
-    background: linear-gradient(transparent, black, transparent);
+    background: linear-gradient(transparent, var(--bg-1), transparent);
 }
