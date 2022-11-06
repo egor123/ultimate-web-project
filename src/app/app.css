@@ -64,6 +64,7 @@ u-app u-header {
 
 u-app u-router {
     z-index: 1;
+    min-height: 100vh;
 }
 
 u-app u-footer {

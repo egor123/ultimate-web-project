@@ -11,6 +11,7 @@ export class Router {
                 this.route({ newURL: window.location.href })
             }
             route(e) {
+                window.scrollTo(0, 0);
                 if (this.view !== undefined)
                     this.unload(this.view);
                 if (e.newURL.includes(urlBase))
