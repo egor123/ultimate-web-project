@@ -8,7 +8,6 @@ export default function (element) {
       window.addEventListener('scroll', parallax);
    moon = element.querySelector("#moon");
    parallax();
-
 }
 
 function parallax() {

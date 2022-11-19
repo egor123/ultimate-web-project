@@ -1,0 +1,26 @@
+u-scroll-anim {
+   display: block;
+   transition: all 1s;
+}
+
+u-scroll-anim[opacity] {
+   opacity: 0;
+}
+
+u-scroll-anim[dir="right"] {
+   transform: translateX(100%);
+}
+
+u-scroll-anim[dir="left"] {
+   transform: translateX(-100%);
+}
+
+u-scroll-anim[blur] {
+   filter: blur(50px);
+}
+
+u-scroll-anim.visible {
+   opacity: 1;
+   transform: translateX(0);
+   filter: none;
+}

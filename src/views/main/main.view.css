@@ -3,13 +3,14 @@ u-router {
     background: var(--bg-1);
 }
 
-u-router #content{
+u-router #wave~section {
     position: relative;
-    padding: var(--side-padding);
+    padding: 40vh var(--side-padding);
     text-align: justify;
 }
 
-u-router #content .separator{
+u-router #wave+section::before {
+    content: '';
     position: absolute;
     left: 0;
     right: 0;
@@ -17,4 +18,27 @@ u-router #content .separator{
     transform: translateY(-50%);
     height: 10rem;
     background: linear-gradient(transparent, var(--bg-1), transparent);
+}
+
+u-router #cards {
+    overflow: hidden;
+    position: relative;
+}
+
+u-router #cards u-scroll-anim {
+    position: relative;
+    width: 40%;
+    left: 50%;
+}
+
+u-router #cards u-scroll-anim+u-scroll-anim {
+    margin-top: 10rem;
+}
+
+u-router #cards u-scroll-anim:nth-child(2n) u-card {
+    transform: translateX(-100%);
+}
+
+u-router #cards u-card {
+    padding: 3rem 1rem;
 }
