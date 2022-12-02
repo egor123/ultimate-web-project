@@ -1,4 +1,5 @@
-u-retro-wave {
+u-retro-wave,
+:root[theme="dark"] u-retro-wave{
    /* background */
    --b-col-1: rgb(0, 0, 0);
    --b-col-2: rgb(14, 18, 87);
@@ -11,9 +12,24 @@ u-retro-wave {
    --g-s: 0.5s;
    /* horizon */
    --h-col: rgb(63, 15, 63);
+}
 
-   /* ------------------------------------------------ */
+:root[theme="light"] u-retro-wave{
+   /* background */
+   --b-col-1: rgb(255, 255, 255);
+   --b-col-2: rgb(106, 114, 255);
+   --b-col-3: rgb(255, 255, 255);
+   /* overlay */
+   --o-col: rgba(77, 7, 240, 0.2);
+   /* grid */
+   --g-col: rgb(248, 190, 199);
+   --g-size: 100px;
+   --g-s: 0.5s;
+   /* horizon */
+   --h-col: rgb(141, 28, 124);
+}
 
+u-retro-wave {
    display: block;
    position: relative;
    display: flex;
@@ -48,7 +64,7 @@ u-retro-wave::before {
 
 u-retro-wave::after {
    background: radial-gradient(circle at 50% 40%, var(--o-col), transparent),
-      linear-gradient(0, var(--b-col-1), transparent 30%);
+      linear-gradient(0, var(--b-col-1) 10%, transparent 30%);
 }
 
 u-retro-wave #background {

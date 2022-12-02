@@ -1,5 +1,10 @@
 :root {
-    /* colors */
+    --side-padding: 5rem;
+}
+
+/* colors */
+:root,
+:root[theme="dark"] {
     --bg-1: rgb(0, 0, 0);
     --bg-2: rgb(15, 1, 15);
     --bg-3: rgb(10, 13, 66);
@@ -7,9 +12,19 @@
     --txt-1: rgb(255, 255, 255);
     --txt-2: rgb(129, 1, 129);
     --txt-3: rgb(0, 34, 97);
-    /*  ----------  */
-    --side-padding: 5rem;
 }
+
+:root[theme="light"] {
+    --bg-1: rgb(255, 255, 255);
+    --bg-2: rgb(231, 231, 231);
+    --bg-3: rgb(108, 113, 210);
+
+    --txt-1: rgb(0, 0, 0);
+    --txt-2: rgb(0, 0, 132);
+    --txt-3: rgb(0, 34, 97);
+}
+/*  ----------  */
+
 
 body {
     background: var(--bg-1);

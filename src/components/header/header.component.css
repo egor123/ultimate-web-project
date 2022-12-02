@@ -5,7 +5,7 @@ u-header {
     align-items: center;
     top: 0;
     transition: transform 0.1s linear;
-    gap: 2rem;
+    gap: 1rem;
     padding: 1rem var(--side-padding);
     text-align: center;
 }
@@ -27,4 +27,9 @@ u-header.hidden {
 
 u-header h1 {
     margin: 0 auto 0 0;
+}
+
+u-header #theme_btn{
+    color: transparent;  
+    text-shadow: 0 0 0 var(--txt-2);
 }

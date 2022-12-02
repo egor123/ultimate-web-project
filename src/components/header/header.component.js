@@ -17,13 +17,23 @@ export default function (element) {
    };
 
 
-   const btn = document.getElementById('loc_btn');
+   const l_btn = element.querySelector('#loc_btn');
    var locale = Locales.locales.filter(l => l !== Locales.locale)[0];
-   btn.innerHTML = locale;
-   btn.addEventListener("click", () => {
+   l_btn.innerHTML = locale;
+   l_btn.addEventListener("click", () => {
       Locales.setLocale(locale).then(() => {
          locale = Locales.locales.filter(l => l !== Locales.locale)[0];
-         btn.innerHTML = locale;
+         l_btn.innerHTML = locale;
       });
+   });
+
+   const t_btn = element.querySelector('#theme_btn');
+   const root = document.querySelector(":root");
+   var theme = (root.getAttribute("theme") ?? "dark");
+   t_btn.innerHTML = theme === "dark"? "🌙" : "☀️";
+   t_btn.addEventListener("click", () => {
+      theme = theme === "dark" ? "light" : "dark";
+      t_btn.innerHTML = theme === "dark"? "☀️" : "🌙";
+      root.setAttribute("theme", theme);
    });
 }
