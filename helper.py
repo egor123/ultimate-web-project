@@ -2,26 +2,26 @@ import os
 import re
 import json
 
-regex = re.compile('.*\.(html|css|js)$')
+regex = re.compile('.*\\.(html|css|js)$')
 dict = {"components": {}, "views": {}}
 
 jsDefComp = ["/**",
              "* @param {HTMLElement} element ",
              "**/",
-             "export default function (element) {",
-             "   //TODO AUTO GENERATED CODE",
+             "export default function(element) {",
+             "    //TODO AUTO GENERATED CODE",
              "}"]
 jsDefView = ["/**",
              "* @param {HTMLElement} element ",
              "**/",
-             "export function load (element) {",
-             "   //TODO AUTO GENERATED CODE",
+             "export function load(element) {",
+             "    //TODO AUTO GENERATED CODE",
              "}",
              "/**",
              "* @param {HTMLElement} element ",
              "**/",
-             "export function unload (element) {",
-             "   //TODO AUTO GENERATED CODE",
+             "export function unload(element) {",
+             "    //TODO AUTO GENERATED CODE",
              "}"]
 htmlDef = ["<template>",
            "   <!-- TODO AUTO GENERATED CODE -->",
@@ -33,7 +33,8 @@ cssDef = ["u-{} {{",
 
 
 def tryCreateFile(full_path, lines):
-    with open(full_path, "a+") as f:
+    print(full_path)
+    with open(full_path, "a+", encoding="utf-8") as f:
         f.seek(0)
         if (f.read() == ""):
             print(f"creating file {full_path}")
