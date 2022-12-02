@@ -12,6 +12,10 @@
             "/#/",
             "/src/views/main/main.view"
         ],
+        "Question": [
+            "/#/question",
+            "/src/views/question/question.view"
+        ],
         "Test": [
             "/#/test",
             "/src/views/test/test.view"

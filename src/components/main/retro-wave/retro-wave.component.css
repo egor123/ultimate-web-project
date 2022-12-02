@@ -63,8 +63,9 @@ u-retro-wave::before {
 }
 
 u-retro-wave::after {
-   background: radial-gradient(circle at 50% 40%, var(--o-col), transparent),
-      linear-gradient(0, var(--b-col-1) 10%, transparent 30%);
+   background-image:
+   radial-gradient(circle at 50% 40%, var(--o-col), transparent),
+      linear-gradient(0, var(--b-col-1) 5%, transparent 30%);
 }
 
 u-retro-wave #background {

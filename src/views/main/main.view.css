@@ -9,6 +9,17 @@ u-router #wave~section {
     text-align: justify;
 }
 
+u-router #wave+section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+    height: 10rem;
+    background: linear-gradient(transparent, var(--bg-1), transparent);
+}
+
 u-router #cards {
     overflow-x: hidden;
     position: relative;
