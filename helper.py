@@ -33,7 +33,6 @@ cssDef = ["u-{} {{",
 
 
 def tryCreateFile(full_path, lines):
-    print(full_path)
     with open(full_path, "a+", encoding="utf-8") as f:
         f.seek(0)
         if (f.read() == ""):
