@@ -21,7 +21,7 @@ export class Router {
                     // window.history.replaceState(null, null, `${urlBase}${e.newURL.split("/#/")[1]}`)
                 }
                 if (this.view === undefined) {
-                    window.history.pushState(null, null, window.location.origin + window.location.pathname + urlBase);
+                    window.history.pushState(null, null, urlBase);
                     this.view = this.routes["/#/"];
                     window.dispatchEvent(new HashChangeEvent("hashchange", { newURL: window.location.origin + window.location.pathname + urlBase }));
                 }
