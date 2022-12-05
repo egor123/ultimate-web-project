@@ -42,6 +42,7 @@ u-router #cards u-scroll-anim[dir="left"] u-card {
 
 u-router #cards u-card {
     padding: 3rem 1rem;
+    min-width: 400px;
 }
 
 u-router #cards li {
