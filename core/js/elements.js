@@ -33,7 +33,7 @@ export class ElementsUtils {
     }
     static removeCss(path) {
         [...document.head.getElementsByTagName("link")].forEach(el => {
-            if (el.getAttribute("href") === path + ".css") {
+            if (el.getAttribute("href") === window.location.origin + window.location.pathname + path + ".css") {
                 document.head.removeChild(el);
                 return;
             }
