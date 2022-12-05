@@ -3,7 +3,7 @@ u-form form {
    flex-direction: column;
    background: var(--bg-2);
    padding: 1rem;
-   border-radius: 10px;
+   border-radius: 20px;
 }
 
 u-form u-content{
