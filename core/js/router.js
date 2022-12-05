@@ -2,7 +2,7 @@ import { ElementsUtils } from './elements.js';
 
 var urlBase = "./#/";
 var current = "";
-export class Routuer {
+export class Router {
     // Creating u-router HTMLElement
     constructor(routes) {
         class Router extends HTMLElement {
