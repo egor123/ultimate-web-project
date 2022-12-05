@@ -1,6 +1,6 @@
 import { ElementsUtils } from './elements.js';
 
-var urlBase = "/#/";
+var urlBase = "./#/";
 var current = "";
 export class Router {
     constructor(routes) {
@@ -15,14 +15,14 @@ export class Router {
                 if (this.view !== undefined)
                     this.unload(this.view);
                 if (e.newURL.includes(urlBase))
-                    this.view = this.routes[`/#/${e.newURL.split(urlBase)[1] ?? ''}`];
+                    this.view = this.routes[`./#/${e.newURL.split(urlBase)[1] ?? ''}`];
                 else {
                     this.view = this.routes[e.newURL.match(/\/#\/(.*)$/)?.[0]];
                     // window.history.replaceState(null, null, `${urlBase}${e.newURL.split("/#/")[1]}`)
                 }
                 if (this.view === undefined) {
-                    window.history.pushState(null, null, "." + urlBase);
-                    this.view = this.routes["/#/"];
+                    window.history.pushState(null, null, urlBase);
+                    this.view = this.routes["./#/"];
                     window.dispatchEvent(new HashChangeEvent("hashchange", { newURL: window.location.origin + window.location.pathname + urlBase }));
                 }
                 else
@@ -52,7 +52,7 @@ export class Router {
         })));
     }
     static setUrlBase(oldBase, newBase) {
-        // window.history.replaceState(null, null, `${newBase}${window.location.href?.split(oldBase)[1] ?? ''}`);
+        window.history.replaceState(null, null, `${newBase}${window.location.href?.split(oldBase)[1] ?? ''}`);
         urlBase = newBase;
     }
     static get view() { 

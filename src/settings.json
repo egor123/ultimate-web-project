@@ -10,15 +10,15 @@
     },
     "views": {
         "About": [
-            "/#/about",
+            "./#/about",
             "./src/views/about/about.view"
         ],
         "Faq": [
-            "/#/faq",
+            "./#/faq",
             "./src/views/faq/faq.view"
         ],
         "Main": [
-            "/#/",
+            "./#/",
             "./src/views/main/main.view"
         ]
     },

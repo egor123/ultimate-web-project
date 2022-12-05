@@ -73,7 +73,7 @@ def main():
                  lambda n: "router",
                  lambda n: f"{n}.view",
                  lambda n: n.title(),
-                 lambda p, n: [f"/#/{'' if n=='main' else n}", '.'+p+f"/{n}.view"])
+                 lambda p, n: [f"./#/{'' if n=='main' else n}", '.'+p+f"/{n}.view"])
 
     for (path, _, names) in os.walk("./src/locales"):
         dict["locales"] = {}

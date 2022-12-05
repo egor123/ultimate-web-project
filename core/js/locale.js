@@ -37,7 +37,7 @@ export class Locales {
             Locales.setLocale(locale);
     }
     static async setLocale(newLocale) {
-        Router.setUrlBase(`/#/${locale ?? ''}/`, `/#/${newLocale}/`);
+        Router.setUrlBase(`./#/${locale ?? ''}/`, `./#/${newLocale}/`);
         localeMap = await fetch(locales[newLocale]).then(t => t.text()).then(JSON.parse);
         [...document.getElementsByTagName("u-l"), document].forEach(el => {
             el.dispatchEvent(new CustomEvent("localechange", {
