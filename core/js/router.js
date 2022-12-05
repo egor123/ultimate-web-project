@@ -18,12 +18,12 @@ export class Router {
                     this.view = this.routes[`/#/${e.newURL.split(urlBase)[1] ?? ''}`];
                 else {
                     this.view = this.routes[e.newURL.match(/\/#\/(.*)$/)?.[0]];
-                    window.history.replaceState(null, null, `${urlBase}${e.newURL.split("/#/")[1]}`)
+                    // window.history.replaceState(null, null, `${urlBase}${e.newURL.split("/#/")[1]}`)
                 }
                 if (this.view === undefined) {
                     window.history.pushState(null, null, window.location.origin + window.location.pathname + urlBase);
                     this.view = this.routes["/#/"];
-                    window.dispatchEvent(new HashChangeEvent("hashchange", { newURL: window.location.origin + window.location.pathname + urlBase }));
+                    // window.dispatchEvent(new HashChangeEvent("hashchange", { newURL: window.location.origin + window.location.pathname + urlBase }));
                 }
                 else
                     this.load(this.view);
@@ -53,7 +53,7 @@ export class Router {
     }
     static setUrlBase(oldBase, newBase) {
         // window.history.replaceState(null, null, `${newBase}${window.location.href?.split(oldBase)[1] ?? ''}`);
-        // urlBase = newBase;
+        urlBase = newBase;
     }
     static get view() { 
         return current; }
