@@ -20,7 +20,7 @@ export class ElementsUtils {
         });
     }
     static async getHtml(path) {
-        return await fetch(window.location.pathname + path + ".html")
+        return await fetch(window.location.origin + window.location.pathname + path + ".html")
             .then(t => t.text())
             .then(t => t.replaceAll(/<.*template>/g, ''));
     }
@@ -28,7 +28,7 @@ export class ElementsUtils {
         var link = document.createElement("link");
         link.type = "text/css";
         link.rel = "stylesheet";
-        link.href = path + ".css";
+        link.href = window.location.origin + window.location.pathname + path + ".css";
         document.head.appendChild(link);
     }
     static removeCss(path) {
@@ -40,6 +40,6 @@ export class ElementsUtils {
         });
     }
     static async getJs(path) {
-        return import(window.location.pathname + path + ".js");
+        return import(window.location.origin + window.location.pathname + path + ".js");
     }
 }
