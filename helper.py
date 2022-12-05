@@ -70,7 +70,7 @@ def main():
                  lambda p, n: p+f"/{n}.component")
 
     updateFolder(False, "./src/views", jsDefView, "views",
-                 lambda n: n,
+                 lambda n: "router",
                  lambda n: f"{n}.view",
                  lambda n: n.title(),
                  lambda p, n: [f"/#/{'' if n=='main' else n}", p+f"/{n}.view"])
