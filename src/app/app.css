@@ -79,6 +79,8 @@ u-app u-header {
 }
 
 u-app u-router {
+    display: block;
+    background: var(--bg-1);
     z-index: 1;
     min-height: 100vh;
 }

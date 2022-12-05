@@ -5,7 +5,7 @@ u-router {
 
 u-router #wave~section {
     position: relative;
-    padding: 40vh var(--side-padding);
+    padding: 30vh var(--side-padding);
     text-align: justify;
 }
 
@@ -35,10 +35,23 @@ u-router #cards u-scroll-anim+u-scroll-anim {
     margin-top: 10rem;
 }
 
-u-router #cards u-scroll-anim:nth-child(2n) u-card {
+u-router #cards u-scroll-anim[dir="left"] u-card {
     transform: translateX(-100%);
 }
 
 u-router #cards u-card {
     padding: 3rem 1rem;
+}
+
+u-router #anwser{
+    background: var(--bg-2);
+}
+
+u-router #anwser h2{
+    font-size: 8rem;
+}
+
+
+u-router #question *{
+    text-align: right;
 }

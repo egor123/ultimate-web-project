@@ -3,19 +3,40 @@
     "name": "Meaning Of Life",
     "about": {
         "id": "About",
-        "name": "Test page",
-        "test": "Just a random test text :)"
+        "name": "About"
     },
     "footer": {
-        "name": "Footer"
-    },
-    "header": {
-        "name": "Header"
+        "name": "Footer",
+        "ps": "In case of your unsatisfaction please leave message to the Golgafrinchans, whos unexpected arrival on prehistoric Earth caused input errors into the system and led to computing the wrong question."
     },
     "main": {
         "id": "home",
-        "name": "Main page",
-        "hello_world": "Hello world!!!"
+        "name": "Life, Universe and Evrything",
+        "anwser": {
+            "h": "42",
+            "p": "After calculating for 7.5-million years, Deep Thought determined the answer:"
+        },
+        "cards": {
+            "evrything": {
+                "h": "...and Everything",
+                "p": "TODO!!!"
+            },
+            "life": {
+                "h": "Ultimate Question of Life...",
+                "p": "TODO!!!"
+            },
+            "universe": {
+                "h": "...the Universe...",
+                "p": "TODO!!!"
+            }
+        },
+        "question": {
+            "h": "What do you get if you multiply six by nine?",
+            "p": "The Question To The Answer Of Ultimate Question of Life, the Universe and Evrything:",
+            "q1": "Six by nine. Forty two.",
+            "q2": "That's it. That's all there is.",
+            "q3": "I always thought something was fundamentally wrong with the universe."
+        }
     },
     "q&a": {
         "id": "Q&A",

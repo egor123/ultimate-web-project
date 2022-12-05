@@ -3,19 +3,40 @@
     "name": "TODO!!!",
     "about": {
         "id": "TODO!!!",
-        "name": "TODO!!!",
-        "test": "TODO!!!"
+        "name": "TODO!!!"
     },
     "footer": {
-        "name": "Jalus"
-    },
-    "header": {
-        "name": "Päis"
+        "name": "Jalus",
+        "ps": "TODO!!!"
     },
     "main": {
         "id": "kodu",
         "name": "Pealeht",
-        "hello_world": "Tere maailm!!!"
+        "anwser": {
+            "h": "TODO!!!",
+            "p": "TODO!!!"
+        },
+        "cards": {
+            "evrything": {
+                "h": "TODO!!!",
+                "p": "TODO!!!"
+            },
+            "life": {
+                "h": "TODO!!!",
+                "p": "TODO!!!"
+            },
+            "universe": {
+                "h": "TODO!!!",
+                "p": "TODO!!!"
+            }
+        },
+        "question": {
+            "h": "TODO!!!",
+            "p": "TODO!!!",
+            "q1": "TODO!!!",
+            "q2": "TODO!!!",
+            "q3": "TODO!!!"
+        }
     },
     "q&a": {
         "id": "TODO!!!",
