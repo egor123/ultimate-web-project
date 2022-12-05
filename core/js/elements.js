@@ -20,7 +20,7 @@ export class ElementsUtils {
         });
     }
     static async getHtml(path) {
-        return await fetch("../../" + path + ".html")
+        return await fetch(window.location.pathname  + path + ".html")
             .then(t => t.text())
             .then(t => t.replaceAll(/<.*template>/g, ''));
     }
@@ -40,6 +40,6 @@ export class ElementsUtils {
         });
     }
     static async getJs(path) {
-        return import("../../" + path + ".js");
+        return import(window.location.pathname + path + ".js");
     }
 }
