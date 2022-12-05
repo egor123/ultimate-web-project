@@ -20,7 +20,7 @@ export class ElementsUtils {
         });
     }
     static async getHtml(path) {
-        return await fetch(window.location.origin + window.location.pathname + path + ".html")
+        return await fetch(path + ".html")
             .then(t => t.text())
             .then(t => t.replaceAll(/<.*template>/g, ''));
     }
@@ -28,12 +28,12 @@ export class ElementsUtils {
         var link = document.createElement("link");
         link.type = "text/css";
         link.rel = "stylesheet";
-        link.href = window.location.origin + window.location.pathname + path + ".css";
+        link.href = path + ".css";
         document.head.appendChild(link);
     }
     static removeCss(path) {
         [...document.head.getElementsByTagName("link")].forEach(el => {
-            if (el.getAttribute("href") === window.location.origin + window.location.pathname + path + ".css") {
+            if (el.getAttribute("href") === path + ".css") {
                 document.head.removeChild(el);
                 return;
             }
