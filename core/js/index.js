@@ -2,7 +2,7 @@ import { ElementsUtils } from './elements.js';
 import { Router } from './router.js';
 import { Locales } from './locale.js';
 
-const settings = await fetch("./src/settings.json")
+const settings = await fetch(window.location.pathname + "/src/settings.json")
     .then(t => t.text())
     .then(t => JSON.parse(t))
 
