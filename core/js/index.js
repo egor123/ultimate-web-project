@@ -6,6 +6,6 @@ const settings = await fetch("./src/settings.json")
     .then(t => t.text())
     .then(t => JSON.parse(t))
 
-new ElementsUtils(settings.components);
 new Locales(settings.locales);
 new Router(settings.views);
+new ElementsUtils(settings.components);

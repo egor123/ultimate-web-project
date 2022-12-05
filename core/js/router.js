@@ -53,7 +53,8 @@ export class Router {
         })));
     }
     static setUrlBase(oldBase, newBase) {
-        window.history.replaceState(null, null, `${newBase}${window.location.href?.split(oldBase)[1] ?? ''}`);
+        console.log(oldBase.split);
+        window.history.replaceState(null, null, `${newBase}${window.location.href?.split(oldBase.slice(1))[1] ?? ''}`);
         urlBase = newBase;
     }
     static get view() { 
