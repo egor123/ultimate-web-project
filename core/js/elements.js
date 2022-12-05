@@ -40,6 +40,6 @@ export class ElementsUtils {
         });
     }
     static async getJs(path) {
-        return import(path + ".js");
+        return import("../../" + path + ".js");
     }
 }
