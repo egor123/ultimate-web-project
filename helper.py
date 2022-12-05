@@ -61,25 +61,24 @@ def main():
                  lambda n: "app",
                  lambda n: "app",
                  lambda n: "u-app",
-                 lambda p, n: f"{p}/app")
+                 lambda p, n: f".{p}/app")
 
     updateFolder(False, "./src/components", jsDefComp, "components",
                  lambda n: n,
                  lambda n: f"{n}.component",
                  lambda n: f"u-{n}",
-                 lambda p, n: p+f"/{n}.component")
+                 lambda p, n: '.'+p+f"/{n}.component")
 
     updateFolder(False, "./src/views", jsDefView, "views",
                  lambda n: "router",
                  lambda n: f"{n}.view",
                  lambda n: n.title(),
-                 lambda p, n: [f"/#/{'' if n=='main' else n}", p+f"/{n}.view"])
+                 lambda p, n: [f"/#/{'' if n=='main' else n}", '.'+p+f"/{n}.view"])
 
     for (path, _, names) in os.walk("./src/locales"):
         dict["locales"] = {}
         for name in names:
             dict["locales"][name.split('.')[0]] = f"{path}/{name}"
-
 
     # TODO fancy json comarison
     with open("./src/settings.json", "w+") as f:
