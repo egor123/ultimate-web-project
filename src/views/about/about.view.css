@@ -1,0 +1,23 @@
+u-router section:first-child{
+   height: 60vh;
+}
+
+u-router section + section {
+   overflow: hidden;
+   display: flex;
+   flex-direction: column;
+   padding: 5rem var(--side-padding);
+   min-height: 50vh;
+   background: var(--bg-1);
+   text-align: justify;
+}
+
+u-router section>* {
+   width: 50%;
+}
+
+u-router section + section:nth-child(2n+1) {
+   align-items: end;
+   text-align: right;
+   background: var(--bg-2);
+}

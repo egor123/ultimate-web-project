@@ -2,19 +2,28 @@ import os
 import re
 import json
 
-regex = re.compile('.*\.(html|css|js)$')
+regex = re.compile('.*\\.(html|css|js)$')
 dict = {"components": {}, "views": {}}
 
-jsDefComp = ["export default function (element) {",
-             "   //TODO AUTO GENERATED CODE",
+jsDefComp = ["/**",
+             "* @param {HTMLElement} element ",
+             "**/",
+             "export default function(element) {",
+             "    //TODO AUTO GENERATED CODE",
              "}"]
-jsDefView = ["export function load (element) {",
-             "   //TODO AUTO GENERATED CODE",
+jsDefView = ["/**",
+             "* @param {HTMLElement} element ",
+             "**/",
+             "export function load(element) {",
+             "    //TODO AUTO GENERATED CODE",
              "}",
-             "export function unload (element) {",
-             "   //TODO AUTO GENERATED CODE",
+             "/**",
+             "* @param {HTMLElement} element ",
+             "**/",
+             "export function unload(element) {",
+             "    //TODO AUTO GENERATED CODE",
              "}"]
-htmlDef = ["<templame>",
+htmlDef = ["<template>",
            "   <!-- TODO AUTO GENERATED CODE -->",
            "</template>"]
 cssDef = ["u-{} {{",
@@ -24,7 +33,7 @@ cssDef = ["u-{} {{",
 
 
 def tryCreateFile(full_path, lines):
-    with open(full_path, "a+") as f:
+    with open(full_path, "a+", encoding="utf-8") as f:
         f.seek(0)
         if (f.read() == ""):
             print(f"creating file {full_path}")
@@ -52,25 +61,24 @@ def main():
                  lambda n: "app",
                  lambda n: "app",
                  lambda n: "u-app",
-                 lambda p, n: f"{p}/app")
+                 lambda p, n: f".{p}/app")
 
     updateFolder(False, "./src/components", jsDefComp, "components",
                  lambda n: n,
                  lambda n: f"{n}.component",
                  lambda n: f"u-{n}",
-                 lambda p, n: p+f"/{n}.component")
+                 lambda p, n: '.'+p+f"/{n}.component")
 
     updateFolder(False, "./src/views", jsDefView, "views",
-                 lambda n: n,
+                 lambda n: "router",
                  lambda n: f"{n}.view",
                  lambda n: n.title(),
-                 lambda p, n: [f"/#/{'' if n=='main' else n}", p+f"/{n}.view"])
+                 lambda p, n: [f"./#/{'' if n=='main' else n}", '.'+p+f"/{n}.view"])
 
     for (path, _, names) in os.walk("./src/locales"):
         dict["locales"] = {}
         for name in names:
             dict["locales"][name.split('.')[0]] = f"{path}/{name}"
-
 
     # TODO fancy json comarison
     with open("./src/settings.json", "w+") as f:

@@ -1,0 +1,29 @@
+u-card {
+    --sh:
+        0 0 .1rem white,
+        0 0 .5rem white,
+        0 0 2rem var(--txt-3),
+        0 0 4rem var(--txt-3);
+
+    background-color: var(--bg-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1em;
+    margin-top: 1em;
+    border: solid;
+    border-radius: 1.5em;
+    border-color: var(--txt-3);
+    text-shadow: var(--sh);
+    box-shadow: var(--sh);
+    background: linear-gradient(0, var(--bg-1) 90%, rgb(43, 43, 43) 90%);
+    background-size: 100% 6px;
+    animation: glitch 0.4s linear infinite;
+}
+
+@keyframes glitch {
+    50% {
+        background-size: 100% 5px;
+    }
+}

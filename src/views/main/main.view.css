@@ -1,3 +1,63 @@
-u-router{
-    background-color: blueviolet;
+u-router {
+    position: relative;
+    background: var(--bg-1);
+}
+
+u-router #wave~section {
+    position: relative;
+    padding: 10rem var(--side-padding);
+    min-height: 60vh;
+    text-align: justify;
+}
+
+u-router #wave+section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: translateY(-50%);
+    height: 10rem;
+    background: linear-gradient(transparent, var(--bg-1), transparent);
+}
+
+u-router #cards {
+    overflow-x: hidden;
+    position: relative;
+}
+
+u-router #cards u-scroll-anim {
+    position: relative;
+    width: 40%;
+    left: 50%;
+}
+
+u-router #cards u-scroll-anim+u-scroll-anim {
+    margin-top: 10rem;
+}
+
+u-router #cards u-scroll-anim[dir="left"] u-card {
+    transform: translateX(-100%);
+}
+
+u-router #cards u-card {
+    padding: 3rem 1rem;
+    min-width: 400px;
+}
+
+u-router #cards li {
+    text-align: left;
+}
+
+u-router #anwser {
+    background: var(--bg-2);
+}
+
+u-router #anwser h2 {
+    font-size: 8rem;
+}
+
+
+u-router #question * {
+    text-align: right;
 }

@@ -1,19 +1,78 @@
 {
     "id": "est",
-    "header":{
-        "name": "Päis"
+    "name": "Elu tähendus",
+    "about": {
+        "id": "Teave",
+        "name": "Elust",
+        "intro": "Meie veebisait on informatiivne. See lehekülg keskendub elule, miks elu on oluline, mis on elu mõte jne. Eesmärk on anda infot ja vastuseid inimestele, kes on elus veidi eksinud. See veebisait sisaldab teksti ja ainulaadset kujundust. Lisaks on funktsioon, mis tõlgib lehe eesti või inglise keelde.",
+        "sections": {
+            "intrests": {
+                "h": "Huvid, mis teevad meie elu huvitavaks:",
+                "li1": "Igaühel on oma hobid, asjad, mida meile meeldib teha (näiteks õppida xD)",
+                "li2": "Paljudel meist on eesmärgid oma elus, mida tahame saavutada (näiteks muusikukarjäär)",
+                "li3": "Meil on sõbrad ja pereliikmed, kes muudavad meie elu veelgi positiivsemaks"
+            },
+            "life": {
+                "h": "Miks me elame?",
+                "p": "Täiskasvanute jaoks tundub see küsimus naiivne. Neid küsivad ju sageli teismelised. Neil on kõrgendatud surmatunne, mis tekitab tunde olemasolu mõttetusest. Ei saa öelda, et siis tuleb see inimesest täielikult välja ja ta elab ainult konkreetsete murede ja probleemidega ning igavesed küsimused jäävad tagaplaanile. Ei, isegi kui mitte igavese küsimuse vormis, aga see mõte pole selline ja seda kohtab meie seas harva."
+            },
+            "meaning": {
+                "h": "Mis on inimelu mõte?",
+                "p": "Elu mõte on tajutav väärtus, millele inimene allutab oma elu, mille nimel ta seab ja täidab elueesmärke. Küsimus elu mõtte kohta on küsimus inimese surma ja tema surematuse tähenduse kohta. Kui inimene ei jätnud oma elu taha varju, siis oli tema elu igaviku suhtes vaid illusoorne."
+            }
+        }
     },
-    "footer":{
-        "name": "Jalus"
+    "faq": {
+        "id": "KKK",
+        "name": "Korduma kippuvad küsimused",
+        "anwser": "42 - kas on vastaja kõigile küsimustele.",
+        "form": {
+            "name": "Nimi:",
+            "email": "E-post:",
+            "h": "Jäta oma küsimus:",
+            "question": "Küsimus:"
+        },
+        "questions": {
+            "1": "Mis vanuses suri kuninganna Victoria abikaasa prints Albert? Ja kui palju neil lapselapsi oli?",
+            "2": "Kui palju lehekülgi oli esimeses trükitud teisaldatava kirjaga raamatus?",
+            "3": "Mis Harry Potteri ja Tarkade Kivi kohta avastab Harry, et ta on võlur?",
+            "4": "How long is The Doctor Who episode entitled '42'?",
+            "5": "Millise kiirusega (km/h) Titanic jäämäega kokku põrkas?"
+        }
+    },
+    "footer": {
+        "ps": "Rahulolematuse korral jätke teade Golgafrinchanidele, kelle ootamatu saabumine eelajaloolisele Maale põhjustas süsteemi sisestusvigu ja viis vale küsimuse arvutamiseni."
     },
     "main": {
-        "id": "kudu",
-        "name": "Pealeht",
-        "hello_world": "Tere maailm!!!"
-    },
-    "test": {
-        "id": "test",
-        "name": "Testleht",
-        "test": "Lihtsalt suvaline testtekst :)"
+        "id": "kodu",
+        "name": "Elu, universum ja kõik",
+        "anwser": {
+            "h": "42",
+            "p": "Pärast 7,5 miljoni aasta pikkust arvutamist määras Deep Thought vastuse:"
+        },
+        "cards": {
+            "evrything": {
+                "h": "...ja kõik",
+                "li1": "kõik asjad.",
+                "li2": "praegune olukord; elu üldiselt."
+            },
+            "life": {
+                "h": "Elu ülim küsimus...",
+                "li1": "Seisund, mis eristab loomi ja taimi anorgaanilisest ainest, sealhulgas võime kasvada, paljuneda, funktsionaalne aktiivsus ja pidevad muutused enne surma.",
+                "li2": "Üksiku inimese või looma olemasolu."
+            },
+            "universe": {
+                "h": "...universum...",
+                "li1": "kogu olemasolev aine ja ruum tervikuna; kosmos. Arvatakse, et universumi läbimõõt on vähemalt 10 miljardit valgusaastat ja see sisaldab tohutul hulgal galaktikaid; see on laienenud alates selle loomisest Suures Paugus umbes 13 miljardit aastat tagasi.",
+                "li2": "teatud tegevus- või kogemussfäär."
+            }
+        },
+        "question": {
+            "h": "Mida sa saad, kui korrutad kuus üheksaga?",
+            "p": "Küsimus vastusele lõplikule küsimusele elu, universumi ja kõige kohta:",
+            "q1": "Kuus üheksa. 42.",
+            "q2": "See on kõik. See on kõik, mis seal on.",
+            "q3": "Arvasin alati, et universumiga on midagi põhimõtteliselt valesti."
+        }
     }
 }

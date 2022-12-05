@@ -1,18 +1,99 @@
-/* :root{
-    TODO PROPS
-} */
+:root {
+    --side-padding: 5rem;
+}
+
+/* colors */
+:root,
+:root[theme="dark"] {
+    --bg-1: rgb(0, 0, 0);
+    --bg-2: rgb(15, 1, 15);
+    --bg-3: rgb(10, 13, 66);
+
+    --txt-1: rgb(255, 255, 255);
+    --txt-2: rgb(129, 1, 129);
+    --txt-3: rgb(0, 34, 97);
+}
+
+:root[theme="light"] {
+    --bg-1: rgb(255, 255, 255);
+    --bg-2: rgb(231, 231, 231);
+    --bg-3: rgb(108, 113, 210);
+
+    --txt-1: rgb(0, 0, 0);
+    --txt-2: rgb(0, 0, 132);
+    --txt-3: rgb(0, 34, 97);
+}
+/*  ----------  */
+
+
+body {
+    background: var(--bg-1);
+    color: var(--txt-1);
+    font-family: "Trebuchet MS";
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-1);
+    box-shadow: inset 0 0 5px var(--txt-2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: solid;
+    border-color: var(--bg-1);
+    background: linear-gradient(120deg, black, var(--bg-2));
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(120deg, black, var(--bg-3));
+}
+
+/* ----------------------------- */
+
+@media(max-device-width: 1000px) {
+    body {
+        font-size: 1.5em;
+    }
+}
+
+@media(max-device-width: 500px) {
+    body {
+        font-size: 3em;
+    }
+}
+
+/* ----------------------------- */
 
 u-app {
     display: grid;
     grid-template-rows: max-content auto max-content;
     min-height: 100vh;
 }
+
 u-app u-header {
     z-index: 2;
 }
+
 u-app u-router {
+    display: block;
+    background: var(--bg-1);
     z-index: 1;
+    min-height: 100vh;
 }
+
 u-app u-footer {
     z-index: 0;
+}
+
+/* -------public-classes------- */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -10,6 +10,7 @@ export class Locales {
         window.addEventListener("hashchange", (e) => this.injectLocale(e));
         this.init();
     }
+    // Creating u-l custom HTMLElement
     async init() {
         await this.injectLocale({ newURL: window.location.href });
         class Locale extends HTMLElement {
@@ -18,14 +19,14 @@ export class Locales {
                 this.update();
                 this.addEventListener("localechange", (e) => this.update());
             }
+            // Updating innerHTML to current language
             update() {
-                var map = localeMap;
-                this.getAttribute("path")?.split("/").forEach(p => { map = map[p] });
-                this.innerHTML = map;
+                this.innerHTML = Locales.get(this.getAttribute("path"));
             }
         }
         customElements.define("u-l", Locale);
     }
+    // Getting current locale from url
     async injectLocale(e) {
         const oldLocale = locale;
         var urlLocale = e?.newURL.match(/(?<=\/#\/)(.*?)(?=\/)/)?.[0];
@@ -38,15 +39,21 @@ export class Locales {
         if (locale !== oldLocale)
             Locales.setLocale(locale);
     }
+    // Updating URL base to include new locale
     static async setLocale(newLocale) {
-        Router.setUrlBase(`/#/${locale ?? ''}/`, `/#/${newLocale}/`);
+        Router.setUrlBase(`./#/${locale ?? ''}/`, `./#/${newLocale}/`);
         localeMap = await fetch(locales[newLocale]).then(t => t.text()).then(JSON.parse);
-        [...document.getElementsByTagName("u-l")].forEach(el => {
+        [...document.getElementsByTagName("u-l"), document].forEach(el => {
             el.dispatchEvent(new CustomEvent("localechange", {
                 detail: { newLocale: newLocale },
             }));
         });
         locale = newLocale;
+    }
+    static get(path) {
+        var map = localeMap;
+        path?.split("/").forEach(p => { map = map[p] });
+        return map;
     }
     static get locale() { return locale; }
     static get locales() { return Object.keys(locales); }
