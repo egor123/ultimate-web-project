@@ -20,7 +20,7 @@ export class ElementsUtils {
         });
     }
     static async getHtml(path) {
-        return await fetch(path + ".html")
+        return await fetch("../../" + path + ".html")
             .then(t => t.text())
             .then(t => t.replaceAll(/<.*template>/g, ''));
     }
