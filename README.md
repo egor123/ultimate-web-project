@@ -27,17 +27,17 @@
   - ### App
     key: html tag, value: path.
     ````json
-    "components": { "u-app": "/src/app/app" }
+    "components": { "u-app": "./src/app/app" }
     ````
   - ### Test Component
     key: html tag, value: path.
     ````json
-    "components": { "u-test": "/src/components/test/test.component" }
+    "components": { "u-test": "./src/components/test/test.component" }
     ````
   - ### Test View
     key: page name, value: array of url and path.
     ````json
-    "components": { "Test": [ "/#/test", "/src/views/test/test.view"] }
+    "components": { "Test": [ "./#/test", "./src/views/test/test.view"] }
     ````
 
 # Additional

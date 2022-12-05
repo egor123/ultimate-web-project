@@ -9,7 +9,7 @@ export default function (element) {
    moon = element.querySelector("#moon");
    parallax();
 }
-
+// Changing offset with different speed, than scrolling
 function parallax() {
    moon.style.transform = `translateY(${-100 + window.scrollY / 3}px)`;
 }

@@ -3,6 +3,9 @@ const observer = new IntersectionObserver((elements) => {
         el.target.classList.toggle("visible", el.isIntersecting);
 });
 
+/**
+* @param {HTMLElement} element 
+**/
 export default function (element) {
     observer.observe(element);
 }

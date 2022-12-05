@@ -3,6 +3,7 @@ export class ElementsUtils {
         for (const [name, path] of Object.entries(components))
             this.create(name, path);
     }
+    // Creating custom HTMLElement from path to folder (html, css, js)
     async create(name, path) {
         const html = await ElementsUtils.getHtml(path);
         const module = await ElementsUtils.getJs(path);

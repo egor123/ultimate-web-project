@@ -2,7 +2,8 @@ import { ElementsUtils } from './elements.js';
 
 var urlBase = "./#/";
 var current = "";
-export class Router {
+export class Routuer {
+    // Creating u-router HTMLElement
     constructor(routes) {
         class Router extends HTMLElement {
             constructor() {
@@ -10,6 +11,7 @@ export class Router {
                 onhashchange = (e) => this.route(e);
                 this.route({ newURL: window.location.href })
             }
+            // Getting current page from url
             route(e) {
                 window.scrollTo(0, 0);
                 if (this.view !== undefined)
@@ -22,6 +24,7 @@ export class Router {
                     window.history.replaceState(null, null, `${urlBase}${e.newURL.split("/#/")[1]}`)
                 }
                 if (this.view === undefined) {
+                    // Go to home page
                     window.history.pushState(null, null, urlBase);
                     this.view = this.routes["./#/"];
                     window.dispatchEvent(new HashChangeEvent("hashchange", { newURL: urlBase }));
@@ -57,6 +60,7 @@ export class Router {
         window.history.replaceState(null, null, `${newBase}${window.location.href?.split(oldBase.slice(1))[1] ?? ''}`);
         urlBase = newBase;
     }
-    static get view() { 
-        return current; }
+    static get view() {
+        return current;
+    }
 }
