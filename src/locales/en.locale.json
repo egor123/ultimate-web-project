@@ -3,11 +3,45 @@
     "name": "Meaning Of Life",
     "about": {
         "id": "About",
-        "name": "About"
+        "name": "About life",
+        "intro": "Our website is informative. This page focuses on life, why life is important, what is the meaning of life, etc. The purpose is to give information and answers to people who are a little lost about life. This website contains text and a unique design. In addition, there is a function that translates the page into Estonian or English.",
+        "sections": {
+            "intrests": {
+                "h": "Interests that make our lives interesting:",
+                "li1": "Everyone has their hobbies, things we like to do (for example. study xD)",
+                "li2": "Many of us have goals in our lives that we want to achieve (for example a musical career)",
+                "li3": "We have friends and family members who make our lives even more positive"
+            },
+            "life": {
+                "h": "Why do we live?",
+                "p": "For adults, this question seems naive. After all, they are often asked by teenagers. They have a heightened sense of death, which creates a sense of the futility of existence. It cannot be said that then it comes out of a person completely and he lives only with specific worries and problems, and eternal questions remain in the background. No, even if not in the form of an eternal question, but this idea is not like that, and it is rarely found among us."
+            },
+            "meaning": {
+                "h": "What is the meaning of human life?",
+                "p": "The meaning of life is a perceived value to which a person subjects his life, for which he sets and fulfills life goals. The question about the meaning of life is a question about the meaning of human death and his immortality. If a person did not leave a shadow behind his life, then his life was only illusory in relation to eternity."
+            }
+        }
+    },
+    "faq": {
+        "id": "FAQ",
+        "name": "Frequently Asked Questions",
+        "anwser": "42 - is the anwser to all questions.",
+        "form": {
+            "name": "Name:",
+            "email": "Email:",
+            "h": "Leave your question:",
+            "question": "Question:"
+        },
+        "questions": {
+            "1": "At what age queen Victoria's husband Prince Albert died? And how much grandchildren  they had?",
+            "2": "How much pages were in first printed book  with movable type?",
+            "3": "On what of Harry Potter and the Philosopher's Stone, Harry discovers he's a wizard?",
+            "4": "How long is The Doctor Who episode entitled '42'?",
+            "5": "At what speed Titanic was travelling (km/hour) when it collided with an iceberg?"
+        }
     },
     "footer": {
-        "name": "Footer",
-        "ps": "In case of your unsatisfaction please leave message to the Golgafrinchans, whos unexpected arrival on prehistoric Earth caused input errors into the system and led to computing the wrong question."
+        "ps": "In case of your dissatisfaction please leave message to the Golgafrinchans, whos unexpected arrival on prehistoric Earth caused input errors into the system and led to computing the wrong question."
     },
     "main": {
         "id": "home",
@@ -19,15 +53,18 @@
         "cards": {
             "evrything": {
                 "h": "...and Everything",
-                "p": "TODO!!!"
+                "li1": "all things.",
+                "li2": "the current situation; life in general."
             },
             "life": {
                 "h": "Ultimate Question of Life...",
-                "p": "TODO!!!"
+                "li1": "The condition that distinguishes animals and plants from inorganic matter, including the capacity for growth, reproduction, functional activity, and continual change preceding death.",
+                "li2": "The existence of an individual human being or animal."
             },
             "universe": {
                 "h": "...the Universe...",
-                "p": "TODO!!!"
+                "li1": "all existing matter and space considered as a whole; the cosmos. The universe is believed to be at least 10 billion light years in diameter and contains a vast number of galaxies; it has been expanding since its creation in the Big Bang about 13 billion years ago.",
+                "li2": "a particular sphere of activity or experience."
             }
         },
         "question": {
@@ -37,9 +74,5 @@
             "q2": "That's it. That's all there is.",
             "q3": "I always thought something was fundamentally wrong with the universe."
         }
-    },
-    "q&a": {
-        "id": "Q&A",
-        "name": "Questions and Answers"
     }
 }

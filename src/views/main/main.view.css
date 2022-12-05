@@ -5,7 +5,8 @@ u-router {
 
 u-router #wave~section {
     position: relative;
-    padding: 30vh var(--side-padding);
+    padding: 10rem var(--side-padding);
+    min-height: 60vh;
     text-align: justify;
 }
 
@@ -43,15 +44,19 @@ u-router #cards u-card {
     padding: 3rem 1rem;
 }
 
-u-router #anwser{
+u-router #cards li {
+    text-align: left;
+}
+
+u-router #anwser {
     background: var(--bg-2);
 }
 
-u-router #anwser h2{
+u-router #anwser h2 {
     font-size: 8rem;
 }
 
 
-u-router #question *{
+u-router #question * {
     text-align: right;
 }

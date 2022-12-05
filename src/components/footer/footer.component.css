@@ -1,13 +1,15 @@
 u-footer {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     width: 100%;
     height: 15em;
 }
 
 u-footer .content {
     background: var(--bg-2);
-    padding: 0 var(--side-padding);
-    position:fixed;
+    position: fixed;
     bottom: 0;
     width: inherit;
     height: inherit;

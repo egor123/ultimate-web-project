@@ -1,0 +1,28 @@
+
+
+@media(min-device-width: 1000px) {
+   u-router{
+      display: grid !important;
+      grid-template-columns: 50% 50%;
+   }
+}
+
+u-router iframe{
+   height: 100%;
+   width: 100%;
+   min-height: 50vh;
+   border: none;
+}
+u-router #content{
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   padding: 1rem var(--side-padding);
+}
+
+u-router u-form{
+   position: sticky;
+   margin-top:auto;
+   bottom: 2rem;
+   width: 100%;
+}

@@ -22,8 +22,6 @@ u-header h1~* {
     background: none;
     border: none;
     font-size: 1em;
-    /* text-decoration: none;
-    text-transform: uppercase; */
 }
 
 u-header.hidden {
