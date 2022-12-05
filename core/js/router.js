@@ -1,7 +1,7 @@
 import { ElementsUtils } from './elements.js';
 
 var urlBase = "/#/";
-
+var current = "";
 export class Router {
     constructor(routes) {
         class Router extends HTMLElement {
@@ -27,6 +27,7 @@ export class Router {
                 }
                 else
                     this.load(this.view);
+                current = this.view.name.toLowerCase();
             }
             load(route) {
                 this.innerHTML = route.html;
@@ -54,4 +55,6 @@ export class Router {
         window.history.replaceState(null, null, `${newBase}${window.location.href?.split(oldBase)[1] ?? ''}`);
         urlBase = newBase;
     }
+    static get view() { 
+        return current; }
 }

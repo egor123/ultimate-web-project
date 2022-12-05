@@ -19,9 +19,7 @@ export class Locales {
                 this.addEventListener("localechange", (e) => this.update());
             }
             update() {
-                var map = localeMap;
-                this.getAttribute("path")?.split("/").forEach(p => { map = map[p] });
-                this.innerHTML = map;
+                this.innerHTML = Locales.get(this.getAttribute("path"));
             }
         }
         customElements.define("u-l", Locale);
@@ -41,12 +39,17 @@ export class Locales {
     static async setLocale(newLocale) {
         Router.setUrlBase(`/#/${locale ?? ''}/`, `/#/${newLocale}/`);
         localeMap = await fetch(locales[newLocale]).then(t => t.text()).then(JSON.parse);
-        [...document.getElementsByTagName("u-l")].forEach(el => {
+        [...document.getElementsByTagName("u-l"), document].forEach(el => {
             el.dispatchEvent(new CustomEvent("localechange", {
                 detail: { newLocale: newLocale },
             }));
         });
         locale = newLocale;
+    }
+    static get(path) {
+        var map = localeMap;
+        path?.split("/").forEach(p => { map = map[p] });
+        return map;
     }
     static get locale() { return locale; }
     static get locales() { return Object.keys(locales); }

@@ -1,5 +1,11 @@
 {
     "id": "en",
+    "name": "Meaning Of Life",
+    "about": {
+        "id": "About",
+        "name": "Test page",
+        "test": "Just a random test text :)"
+    },
     "footer": {
         "name": "Footer"
     },
@@ -11,9 +17,8 @@
         "name": "Main page",
         "hello_world": "Hello world!!!"
     },
-    "test": {
-        "id": "test",
-        "name": "Test page",
-        "test": "Just a random test text :)"
+    "q&a": {
+        "id": "Q&A",
+        "name": "Questions and Answers"
     }
 }

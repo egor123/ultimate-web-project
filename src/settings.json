@@ -8,17 +8,17 @@
         "u-scroll-anim": "/src/components/scroll-anim/scroll-anim.component"
     },
     "views": {
+        "About": [
+            "/#/about",
+            "/src/views/about/about.view"
+        ],
         "Main": [
             "/#/",
             "/src/views/main/main.view"
         ],
-        "Question": [
-            "/#/question",
-            "/src/views/question/question.view"
-        ],
-        "Test": [
-            "/#/test",
-            "/src/views/test/test.view"
+        "Q&A": [
+            "/#/q&a",
+            "/src/views/q&a/q&a.view"
         ]
     },
     "locales": {

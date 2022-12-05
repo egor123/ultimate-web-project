@@ -10,6 +10,11 @@ u-header {
     text-align: center;
 }
 
+u-header * {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
 u-header h1~* {
     color: var(--txt-2);
     margin: 0;
@@ -17,8 +22,8 @@ u-header h1~* {
     background: none;
     border: none;
     font-size: 1em;
-    text-decoration: none;
-    text-transform: uppercase;
+    /* text-decoration: none;
+    text-transform: uppercase; */
 }
 
 u-header.hidden {

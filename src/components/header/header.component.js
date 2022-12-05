@@ -1,11 +1,18 @@
 import { Locales } from "../../../core/js/locale.js";
+import { Router } from "../../../core/js/router.js";
 
 const changeStateDelta = 200;
 
-/**
-* @param {HTMLElement} element 
-**/
-export default function (element) {
+//Dynamicly changes title in head
+function updateTitle(){
+   const set = () => document.title = Locales.get("name") + ((Router.view === "main") ? "" :` | ${Locales.get(Router.view+"/id")}`);
+   set();
+   document.addEventListener("localechange", set);
+   window.addEventListener("hashchange", set);
+}
+
+//Show and hide header on scroll
+function scroll(element){
    var previousScrollY = window.scrollY;
    var offset = 0;
 
@@ -15,25 +22,39 @@ export default function (element) {
       offset = (delta * offset) >= 0 ? offset + delta : 0;
       element.classList.toggle("hidden", offset < -changeStateDelta);
    };
+}
 
-
-   const l_btn = element.querySelector('#loc_btn');
+//Toggle locales on click
+function localeButton(button){
    var locale = Locales.locales.filter(l => l !== Locales.locale)[0];
-   l_btn.innerHTML = locale;
-   l_btn.addEventListener("click", () => {
+   button.innerHTML = locale;
+   button.addEventListener("click", () => {
       Locales.setLocale(locale).then(() => {
+         //Change locale to next in arr
          locale = Locales.locales.filter(l => l !== Locales.locale)[0];
-         l_btn.innerHTML = locale;
+         button.innerHTML = locale;
       });
    });
+}
 
-   const t_btn = element.querySelector('#theme_btn');
+//Toggle theme on click
+function themeButton(button){
    const root = document.querySelector(":root");
    var theme = (root.getAttribute("theme") ?? "dark");
-   t_btn.innerHTML = theme === "dark"? "🌙" : "☀️";
-   t_btn.addEventListener("click", () => {
+   button.innerHTML = theme === "dark"? "🌙" : "☀️";
+   button.addEventListener("click", () => {
       theme = theme === "dark" ? "light" : "dark";
-      t_btn.innerHTML = theme === "dark"? "☀️" : "🌙";
+      button.innerHTML = theme === "dark"? "☀️" : "🌙";
       root.setAttribute("theme", theme);
    });
+}
+
+/**
+* @param {HTMLElement} element 
+**/
+export default function (element) {
+   updateTitle();
+   scroll(element);
+   localeButton(element.querySelector('#loc_btn'));
+   themeButton(element.querySelector('#theme_btn'));
 }
