@@ -14,11 +14,12 @@ export class Router {
                 window.scrollTo(0, 0);
                 if (this.view !== undefined)
                     this.unload(this.view);
-                if (e.newURL.includes(urlBase))
-                    this.view = this.routes[`./#/${e.newURL.split(urlBase)[1] ?? ''}`];
+
+                if (e.newURL.includes(urlBase.slice(1)))
+                    this.view = this.routes[`./#/${e.newURL.split(urlBase.slice(1))[1] ?? ''}`];
                 else {
-                    this.view = this.routes[e.newURL.match(/\/#\/(.*)$/)?.[0]];
-                    // window.history.replaceState(null, null, `${urlBase}${e.newURL.split("/#/")[1]}`)
+                    this.view = this.routes[`./#/${e.newURL.split("/#/")[1] ?? ''}`];
+                    window.history.replaceState(null, null, `${urlBase}${e.newURL.split("/#/")[1]}`)
                 }
                 if (this.view === undefined) {
                     window.history.pushState(null, null, urlBase);
