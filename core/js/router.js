@@ -23,7 +23,7 @@ export class Router {
                 if (this.view === undefined) {
                     // window.history.pushState(null, null, window.location.origin + window.location.pathname + urlBase);
                     this.view = this.routes["/#/"];
-                    // window.dispatchEvent(new HashChangeEvent("hashchange", { newURL: window.location.origin + window.location.pathname + urlBase }));
+                    window.dispatchEvent(new HashChangeEvent("hashchange", { newURL: window.location.origin + window.location.pathname + urlBase }));
                 }
                 else
                     this.load(this.view);
