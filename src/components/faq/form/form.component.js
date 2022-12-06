@@ -12,7 +12,6 @@ export default function(element) {
             el.parentElement.classList.add("selected");
         });
         el.addEventListener("focusout", () => {
-            console.log(el.value);
             if(el.value === "")
             el.parentElement.classList.remove("selected");
         }); 
